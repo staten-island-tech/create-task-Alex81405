@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+  <title>AP Create Task Project</title>
+</head>
+
+<body>
+
+  <section>
+
+    <h1 class="title">Random Jokes</h1>
+
+    <div id="searchWord">
+      <label for="searchInput" class="search">Type a Keyword:</label>
+      <input type="text" id="searchInput" class="search">
+      <button class="button" id="searchButton">Submit</button>
+    </div>
+
+    <div class="container">
+      <p id="joke" class="joke"></p>
+      <button id="getJokeButton" class="button">Another Joke</button>
+    </div>
+
+  </section>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
