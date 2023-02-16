@@ -1,8 +1,8 @@
 const DOMSelectors = {
-    jokeButton: document.getElementById("getJokeButton"),
-    randomjoke: document.getElementById("joke"),
-    searchButton: document.getElementById("searchButton"),
-    searchInput: document.getElementById("searchInput")
+  factButton: document.getElementById("getfactButton"),
+  randomfact: document.getElementById("fact"),
+  searchButton: document.getElementById("searchButton"),
+  searchInput: document.getElementById("searchInput"),
 };
 
-export {DOMSelectors}
+export { DOMSelectors };

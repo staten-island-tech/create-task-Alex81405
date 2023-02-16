@@ -76,7 +76,7 @@ label {
   color: var(--white);
 }
 
-.joke {
+.fact {
   font-family: 'Trirong', sans-serif;
   font-size: var(--p);
   line-height: 5rem;

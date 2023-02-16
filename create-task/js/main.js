@@ -3,7 +3,7 @@ import { DOMSelectors } from "./dom";
 
 const URL = "https://v2.jokeapi.dev/joke/Any?safe-mode";
 
-async function getRandomJoke(url) {
+async function getRandomFact(url) {
   try {
     const response = await fetch(url);
     if (response.status < 200 || response.status > 299) {
@@ -13,11 +13,11 @@ async function getRandomJoke(url) {
       const data = await response.json();
       console.log(data);
       if (data.setup) {
-        DOMSelectors.randomjoke.innerHTML = `${data.setup} <br><br> ${data.delivery}`;
+        DOMSelectors.randomfact.innerHTML = `${data.setup} <br><br> ${data.delivery}`;
       } else if (data.error === true) {
-        DOMSelectors.randomjoke.innerHTML = data.causedBy;
+        DOMSelectors.randomfact.innerHTML = data.causedBy;
       } else {
-        DOMSelectors.randomjoke.innerHTML = data.randomjoke;
+        DOMSelectors.randomfact.innerHTML = data.randomfact;
       }
     }
   } catch (error) {
@@ -29,14 +29,14 @@ DOMSelectors.searchButton.addEventListener("click", function () {
   let newURL = URL + "&contains=" + DOMSelectors.searchInput.value;
   console.log(searchInput.value);
   console.log(newURL);
-  getRandomJoke(newURL);
+  getRandomFact(newURL);
   DOMSelectors.searchInput.value = "";
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  getRandomJoke(URL);
+  getRandomFact(URL);
 });
 
-DOMSelectors.jokeButton.addEventListener("click", function () {
-  getRandomJoke(URL);
+DOMSelectors.factButton.addEventListener("click", function () {
+  getRandomFact(URL);
 });
