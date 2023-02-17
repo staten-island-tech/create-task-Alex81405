@@ -2,6 +2,7 @@ import "/styles/style.css";
 import { DOMSelectors } from "./dom";
 
 const URL = "https://v2.jokeapi.dev/joke/Any?safe-mode";
+//https://api.nasa.gov/planetary/apod?api_key=hggZsbDwrb43TDFhsSALbqiZacM9zZKwX7Nbf5bE
 
 async function getRandomFact(url) {
   try {
